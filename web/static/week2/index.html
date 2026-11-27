@@ -4,6 +4,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>ร้านตัวอย่าง — บทเรียน HTML สัปดาห์ที่ 1</title>
+    <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
     <header>
@@ -22,11 +23,13 @@
 
       <section id="catalog" aria-labelledby="catalog-title">
         <h2 id="catalog-title">รายการสินค้า</h2>
+        
         <article aria-labelledby="notebook-title">
           <h3 id="notebook-title">สมุดบันทึก</h3>
           <p>ปกอ่อน จำนวน 120 หน้า</p>
           <p>ราคา <data value="129">129 บาท</data></p>
           <button type="button" disabled>เพิ่มลงตะกร้า — จะทำงานในบทเรียนภายหลัง</button>
+
         </article>
       </section>
 
@@ -36,16 +39,23 @@
       </section>
     </main>
 
-  <form>
-    <label for="productId">สินค้าที่สนใจ</label>
-    <select id="productId" name="productId" required>
-      <option value="notebook">สมุดบันทึก</option>
-    </select>
+    <form class="interest-form">
+      <div class="field">
+         <label for="product">สินค้าที่สนใจ</label>
+          <select id="product" name="productId" required>
+            <option value="notebook">สมุดบันทึก</option>
+            <option value="pen">ปากกา</option>
+          </select>
+      </div>
 
-  <label for="quantity">จำนวนที่สนใจ</label>
-  <input type="number" id="quantity"
-         name="quantity" value="2" min="1" required>
+  <div class="field">
+    <label for="quantity">จำนวนที่สนใจ</label>
+    <input id="quantity" name="quantity" type="number" min="1" required/> 
+  </div>
+
   <button type="submit">ทดลองส่งข้อมูล</button>
+  <button type="reset">คืนค่าเริ่มต้น</button>
+  <a href="index.html">เริ่มตัวอย่างใหม่</a>
 </form>
 
     <footer>

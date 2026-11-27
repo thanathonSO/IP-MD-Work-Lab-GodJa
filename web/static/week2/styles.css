@@ -1,0 +1,39 @@
+.interest-form {
+  display: flex;
+  align-items: flex-end;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.interest-form .field {
+  flex: 1 1 12rem;
+  min-width: 0;
+}
+
+.interest-form button {
+  min-height: 2.75rem;
+}
+
+a:focus-visible,
+  button:focus-visible,
+  select:focus-visible,
+  input:focus-visible {
+    outline: 3px solid #2563eb;
+    outline-offset: 2px;
+  }
+
+#catalog {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+#catalog > h2 {
+  grid-column: 1 / -1;
+}
+
+@media (min-width: 768px) {
+  #catalog {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
